@@ -42,6 +42,22 @@ node {baseDir}/scripts/security-check.mjs path "<path>"
 node {baseDir}/scripts/audit-skill-dir.mjs /absolute/or/relative/path/to/skill
 ```
 
+### 3) Write audit into Obsidian vault
+
+```bash
+node {baseDir}/scripts/write-obsidian-audit.mjs /tmp/audit.json "Skill Audit - my-skill"
+```
+
+This writes a markdown audit note into the ClawLite Obsidian vault under `Security Audits/`.
+
+### 4) Install lightweight local hook wrapper
+
+```bash
+bash {baseDir}/scripts/install-hooks.sh
+```
+
+This installs a reusable workspace script for prepublish checks.
+
 This audits for:
 - hardcoded secrets / tokens
 - curl|bash / wget|sh installers
